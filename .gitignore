@@ -1,0 +1,8 @@
+/input_main/*
+!/input_main/.gitignore
+
+/input_thumb/*
+!/input_thumb/.gitignore
+
+/output/*
+!/output/.gitignore
