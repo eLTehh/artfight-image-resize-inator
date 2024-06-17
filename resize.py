@@ -6,6 +6,8 @@ import math
 main_path = os.path.join(os.getcwd(), 'input_main')
 
 for filename in os.listdir(main_path):
+    if filename == ".gitignore":
+        continue
     print("Main: Resizing " + filename)
     file_path = os.path.join(main_path, filename)
     img = Image.open(file_path)
@@ -16,6 +18,8 @@ for filename in os.listdir(main_path):
 thumb_path = os.path.join(os.getcwd(), 'input_thumb')
 
 for filename in os.listdir(thumb_path):
+    if filename == ".gitignore":
+        continue
     print("Thumb: Resizing " + filename)
     file_path = os.path.join(thumb_path, filename)
     img = Image.open(file_path)
