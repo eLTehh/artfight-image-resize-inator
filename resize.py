@@ -12,7 +12,8 @@ for filename in os.listdir(main_path):
     file_path = os.path.join(main_path, filename)
     img = Image.open(file_path)
     greater_size = max(img.size[0], img.size[1])
-    img = img.resize((math.ceil(img.size[0] / greater_size * 2000), math.ceil(img.size[1]/greater_size * 2000)))
+    if greater_size > 2000:
+        img = img.resize((math.ceil(img.size[0] / greater_size * 2000), math.ceil(img.size[1]/greater_size * 2000)))
     img.save(os.getcwd() + "/output/resized_" + filename)
     
 thumb_path = os.path.join(os.getcwd(), 'input_thumb')
